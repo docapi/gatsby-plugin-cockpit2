@@ -1,5 +1,7 @@
 # gatsby-plugin-cockpit
 
+This a slightly adapted version of the original plugin. It works with Gatsby 2 AND Cockpit 2. (Please deinstall other variants of this plugin first)
+
 This source plugin pulls [Cockpit Headless CMS](https://getcockpit.com) data to a[GatsbyJS](https://www.gatsbyjs.org), a static site generator for React.
 
 ## Resources
@@ -9,7 +11,7 @@ This source plugin pulls [Cockpit Headless CMS](https://getcockpit.com) data to 
 
 ## Install
 
-`npm install --save gatsby-plugin-cockpit`
+`npm install --save git:://github.com:docapi/gatsby-plugin-cockpit2.git`
 
 ##How to use
 
