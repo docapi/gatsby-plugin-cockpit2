@@ -32,13 +32,11 @@ exports.sourceNodes = async ({
     cockpit.assets(), 
     cockpitHelpers.getCockpitCollections(),
     cockpitHelpers.getCockpitSingletons(),
-    cockpitHelpers.getCockpitRegions(),
   ]);
 
   assets.forEach(asset => asset.path = host + '/storage/uploads' + asset.path);
 
   itemsStore.set('collectionsItems', collectionsItems);
-  itemsStore.set('regionsItems', regionsItems);
   itemsStore.set('collectionsNames', collectionsNames);
   itemsStore.set('singletonsItems', singletonsItems);
 
@@ -58,7 +56,6 @@ exports.sourceNodes = async ({
   const createNodesHelpers = new CreateNodesHelpers({
     collectionsItems,
     singletonsItems,
-    regionsItems,
     store,
     cache,
     createNode,

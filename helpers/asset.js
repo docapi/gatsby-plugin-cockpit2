@@ -56,8 +56,8 @@ class AssetMapHelpers {
         // the folder and a leadig slash
         // e.g. /cockpit/uploads/storage/...
         //
-        // path = this.config.host + '/' + path;
-        path = this.config.baseURL + path;
+        path = this.config.host + '/' + path;
+        //path = this.config.baseURL + path;
       }
       if (validUrl.isUri(path)) {
         this.assets.push({

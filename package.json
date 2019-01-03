@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-cockpit",
-  "description": "Gatsby source plugin for Cockpit headless CMS API.",
+  "description": "Gatsby source plugin for Cockpit 2 headless CMS API.",
   "author": "Paul Hayes <paul@ginetta.net>",
   "version": "1.0.39",
   "keywords": [

@@ -62,32 +62,4 @@ module.exports = class CockpitHelpers {
       )
       : all;
   }
-
-  // get cockpit collection items by collection name
-  async getRegionItems(name) {
-    const values = await this.cockpit.regionData(name);
-    const template = await this.cockpit.regionGet(name);
-    return { data: {values, template}, name };
-  }
-
-  // get all cockpit regions, together with their items
-  async getCockpitRegions() {
-    const regions = await this.getRegionNames();
-    return Promise.all(regions.map(name => {
-      var i = this.getRegionItems(name);
-      return i;
-    }));
-  }  
-
-  async getRegionNames() {
-    
-    const allRegions = await this.cockpit.regionList(); 
-    const explictlyDefinedRegions = this.config.regions;
-
-    return explictlyDefinedRegions instanceof Array
-      ? allRegions.filter(
-        name => explictlyDefinedRegions.indexOf(name) > -1
-      )
-      : allRegions;
-  }
 }

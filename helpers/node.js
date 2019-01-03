@@ -6,7 +6,6 @@ module.exports = class CreateNodesHelpers {
   constructor({
     collectionsItems,
     singletonsItems,
-    regionsItems,
     store,
     cache,
     createNode,
@@ -15,7 +14,6 @@ module.exports = class CreateNodesHelpers {
   }) {
     this.collectionsItems = collectionsItems;
     this.singletonsItems = singletonsItems;
-    this.regionsItems = regionsItems;
     this.store = store;
     this.cache = cache;
     this.createNode = createNode;
@@ -46,15 +44,6 @@ module.exports = class CreateNodesHelpers {
 
         return { name, nodes, fields };
       }),
-      this.regionsItems.map( ({ name, data }) => {
-
-        const node = this.createRegionItemNode({
-          data,
-          name,
-        });
-
-        return { name: 'region', node };
-      })
     );
   }
 
@@ -453,26 +442,6 @@ module.exports = class CreateNodesHelpers {
         contentDigest: crypto
           .createHash(`md5`)
           .update(JSON.stringify(entry))
-          .digest(`hex`),
-      },
-    };
-    this.createNode(node);
-    return node;
-  }
-
-  createRegionItemNode({ data, name }) {
-
-    const node = {
-      ...data,
-      name: name,
-      children: [],
-      parent: null,
-      id: `region-${name}`,
-      internal: {
-        type: 'region',
-        contentDigest: crypto
-          .createHash(`md5`)
-          .update(JSON.stringify(data))
           .digest(`hex`),
       },
     };
