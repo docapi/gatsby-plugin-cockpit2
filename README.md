@@ -1,4 +1,4 @@
-# gatsby-plugin-cockpit
+# gatsby-plugin-cockpit (Gatsby2 / Cockpit2)
 
 This a slightly adapted version of the original plugin. It works with Gatsby 2 AND Cockpit 2. (Please deinstall other variants of this plugin first)
 
