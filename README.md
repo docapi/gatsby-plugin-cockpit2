@@ -9,6 +9,12 @@ This source plugin pulls [Cockpit Headless CMS](https://getcockpit.com) data to 
 + **[Example project](https://github.com/pierreberchtold/gatsby-cockpit-portfolio)**: a simple portfolio with pages and projects
 + **[Getting started article](https://blog.ginetta.net/getting-started-with-gatsby-and-cockpit-part-1-of-2-d86871932d44)**: an introduction based on the example project.
 
+## Uninstall old versions of plugin
+
+If you have another version of this plugin in your package.json please uninstall it first
+
+`npm uninstall --save gatsby-plugin-cockpit`
+
 ## Install
 
 `npm install --save git://github.com:docapi/gatsby-plugin-cockpit2.git`
