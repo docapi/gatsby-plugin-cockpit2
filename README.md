@@ -11,7 +11,7 @@ This source plugin pulls [Cockpit Headless CMS](https://getcockpit.com) data to 
 
 ## Install
 
-`npm install --save git:://github.com:docapi/gatsby-plugin-cockpit2.git`
+`npm install --save git://github.com:docapi/gatsby-plugin-cockpit2.git`
 
 ##How to use
 
